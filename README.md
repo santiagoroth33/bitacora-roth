@@ -6,4 +6,4 @@ Curso: Introducción a la Ciencia de Datos — Universidad de Montevideo — 202
 
 | Semana | Entrada |
 | --- | --- |
-| 2026-08-24 | [Primera carga de datos](diario/2026-08-24.md) |
+
