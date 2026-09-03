@@ -1,22 +1,16 @@
 # %%
 from pathlib import Path
 import pandas as pd
-import os
 
 # 1. Definir la ruta raíz del proyecto o del directorio de trabajo actual
-print("Antes", Path.cwd())
-BASE_DIR = Path.cwd()
-
-os.chdir("C:\\Users\\roths\\Documents\\GitHub")
-print("Después", Path.cwd())
 BASE_DIR = Path.cwd()
 
 # 2. Construir la ruta relativa de forma segura utilizando el operador /
 # Estructura esperada: tu_proyecto/data/raw/datos.csv
-archivo = "Velocidad_promedio_Agosto_2026.csv"
-ruta_csv = BASE_DIR / "bitacora-roth" / "data" / "raw" / archivo
+archivo = "rotulado_de_alimentos_2024.csv"
+ruta_csv = BASE_DIR / "data" / "raw" / archivo
 
-ruta_csv = BASE_DIR / "bitacora-roth" / "data" / "raw" / "Velocidad_promedio_Agosto_2026.csv"
+ruta_csv = BASE_DIR / "data" / "raw" / "rotulado_de_alimentos_2024.csv"
 
 # 3. Verificar que el archivo realmente existe antes de cargarlo
 if not ruta_csv.exists():
@@ -37,7 +31,7 @@ df.info()
 df.shape
 
 # 5.2. Filas únicas: detectando la columna que contiene el ID (Equivalente a length(unique(...)))
-df["cod_detector"].nunique() #Cambie "matricula_letra" por "cod_detector"
+df["muestra"].nunique() #Cambie "matricula_letra" por "muestra" para este dataset
 # Si df["columna"].nunique() es igual a len(df), esa columna es un ID único
 print("\nValores únicos por columna (Buscar candidatos a ID):")
 print(df.nunique())
