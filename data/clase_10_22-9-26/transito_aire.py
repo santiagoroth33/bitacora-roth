@@ -170,6 +170,7 @@ axes[0].legend()
 fig.suptitle("Paso 4. El día típico (cada serie dividida por su media)")
 fig.tight_layout()
 plt.show()
+
 # Qué vemos: el NO2 tiene picos en las mismas horas que el tránsito, y
 #   entre semana más marcados que el fin de semana. El PM2.5 no sigue ese ritmo.
 # Se observa un pico inusual de PM2.5 a la madrugada, que no se corresponde con el tránsito ni con el NO2. 
